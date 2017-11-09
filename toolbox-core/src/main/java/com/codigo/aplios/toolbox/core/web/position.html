@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+@
+mixin
+
+
+
+ 
+
+
+
+vertical-align
+
+
+
+ 
+
+
+
+($
+position
+
+
+
+
+
+
+:
+
+
+
+ 
+
+
+
+relative
+
+
+
+ 
+
+
+
+)
+{
+position
+
+
+
+
+
+
+:
+
+
+
+ 
+
+
+
+$
+position
+
+
+
+
+
+
+;
+top
+
+
+
+
+
+
+:
+
+
+
+ 
+
+
+
+50%;
+-webkit-transform
+
+
+
+
+
+
+:
+
+
+
+ 
+
+
+
+translateY
+
+
+
+
+
+
+(-50%);
+-ms-transform
+
+
+
+
+
+
+:
+
+
+
+ 
+
+
+
+translateY
+
+
+
+
+
+
+(-50%);
+transform
+
+
+
+
+
+
+:
+
+
+
+ 
+
+
+
+translateY
+
+
+
+
+
+
+(-50%);
+}
+body {
+	font-family: 'Montserrat', serif;
+	font-size: 5.4em;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+.box-center { @include vertical-align();
+	
+}
+
+.box-outer {
+	position: relative;
+	margin: 10px auto;
+	width: 400px;
+	height: 400px;
+	background: #8DC2FF;
+}
+
+.box-inner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 200px;
+	height: 200px;
+	background: #88E68E;
+	border-radius: 50%;
+	border: solid 1px silver;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+
+.box-inner p {
+	/* @include vertical-align('absolute'); */
+	position: absolute;
+	color: brown;
+	top: 50%;
+	left: 50%;
+	color: #fff1;
+	transform: translate(-50%, -50%);
+}
+</style>
+</head>
+<body>
+	<div class="box-outer">
+		<div class="box-inner">
+			<p>inner text</p>
+		</div>
+	</div>
+	<footer>
+		<section>
+			<p>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img
+					style="border: 0; width: 88px; height: 31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+					alt="Poprawny CSS!" />
+				</a>
+			</p>
+			<p>
+				<a href="http://jigsaw.w3.org/css-validator/check/referer"> <img
+					style="border: 0; width: 88px; height: 31px"
+					src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Poprawny CSS!" />
+				</a>
+			</p>
+		</section>
+	</footer>
+</body>
+</html>

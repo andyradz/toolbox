@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="author" content="Andrzej Radziszewski">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>radziszewski.pl</title>
+<meta name="description" content="Blog tematyczny o projektowaniu i tworzeniu stron oraz aplikacji internetowych - Stanisław Molitorys - web developer blog">
+<!-- Latest compiled and minified CSS -->
+<link
+	rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	crossorigin="anonymous">
+<!-- Optional theme -->
+<link
+	rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+	integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+	crossorigin="anonymous">
+<!-- Latest compiled and minified JavaScript -->
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+	integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+	crossorigin="anonymous"></script>
+<style>
+{
+.cn-bottom {
+	bottom: 0px;
+}
+
+#cookie-notice {
+	display: none;
+	position: fixed;
+	min-width: 100%;
+	height: auto;
+	z-index: 100000;
+	font-size: 12px;
+	line-height: 18px;
+	left: 0px;
+	text-align: center;
+}
+
+#cookie-notice .button {
+	margin-left: 10px;
+}
+
+#cookie-notice .bootstrap.button {
+	font-family: sans-serif;
+	display: inline-block;
+	*display: inline:;
+	padding: 4px 12px;
+	margin-right: 0.3em;
+	margin-bottom: 0px;
+	*margin-left: .3em:;
+	line-height: 20px;
+	color: #333333;
+	text-align: center;
+	text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.75);
+	font-style: normal;
+	vertical-align: middle;
+	cursor: pointer;
+	color: #ffffff;
+	text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.25);
+	background-color: #006dcc;
+	*background-color: #0044cc:;
+	background-image: -moz-linear-gradient(top, #0088cc, #0044cc);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0088cc),
+		to(#0044cc));
+	background-image: -webkit-linear-gradient(top, #0088cc, #0044cc);
+	background-image: -o-linear-gradient(top, #0088cc, #0044cc);
+	background-image: linear-gradient(to bottom, #0088cc, #0044cc);
+	background-repeat: repeat-x;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #0044cc #0044cc #002a80;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2), 0px 1px 2px
+		rgba(0, 0, 0, 0.05);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc',
+		endColorstr='#ff0044cc', GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	padding: 2px 10px;
+	font-size: 12px;
+	text-decoration: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	outline: none;
+	article
+	,
+	aside,
+	details,
+	figcaption,
+	figure,
+	footer,
+	header,
+	hgroup,
+	main,
+	nav,
+	section,
+	summary
+	{
+	display
+	:
+	block;
+}
+
+body {
+	margin: 0;
+}
+
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+
+a {
+	background: transparent;
+}
+
+*, *::before, *::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+b, strong {
+	font-weight: bold;
+}
+
+body>footer {
+	background: #111;
+	box-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+	color: #f5f5f5;
+	margin-top: 4em;
+	padding: 1em 0em 3em 0em;
+}
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.4285;
+	color: #333;
+	background-color: #fff;
+}
+
+body {
+	font-family: Tahoma;
+	font-size: 14px;
+}
+
+html {
+	font-size: 62.5%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+/* @media all and (min-width:768px) */
+.container {
+	width: 750px;
+}
+/* @media all and (min-width:992px) */
+.container {
+	width: 970px;
+}
+/* @media all and (min-width:1200px) */
+.container {
+	width: 1170px;
+}
+
+.container::before, .container::after {
+	display: table;
+	content: " ";
+}
+
+.container::after {
+	clear: both;
+}
+
+.container::before, .container::after {
+	display: table;
+	content: " ";
+}
+
+.container::after {
+	clear: both;
+}
+
+.row {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+.row::before, .row::after {
+	display: table;
+	content: " ";
+}
+
+.row::after {
+	clear: both;
+}
+
+.row::before, .row::after {
+	display: table;
+	content: " ";
+}
+
+.row::after {
+	clear: both;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2,
+	.col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3,
+	.col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5,
+	.col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6,
+	.col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8,
+	.col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9,
+	.col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11,
+	.col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12
+	{
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+/* @media all and (min-width:768px) */
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6,
+	.col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11 {
+	float: left;
+}
+/* @media all and (min-width:768px) */
+.col-sm-4 {
+	width: 33.33%;
+}
+
+.widget {
+	margin: 0em 0em 1em 0em;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 500;
+	line-height: 1.1;
+	color: inherit;
+}
+
+h1, h2, h3 {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+h2, .h2 {
+	font-size: 30px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia;
+	margin-top: 0px;
+}
+
+.widgettitle {
+	margin: -10px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.widgettitle {
+	background: #333;
+	border-bottom: 5px solid #38c;
+	color: #f5f5f5;
+	font-size: 16px;
+}
+
+body>footer .widgettitle {
+	background: none;
+	color: inherit;
+	margin: 0px 0px 10px 0px;
+	padding: 10px;
+}
+
+#recent-posts-2 h2, #recent-comments-2 h2, #archives-2 h2, #categories-2 h2,
+	#text-3 h2, #tag_cloud-4 h2 {
+	font-family: "Abel";
+	font-size: 18px;
+}
+
+a {
+	color: #428bca;
+	text-decoration: none;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+p {
+	margin: 0 0 10px;
+}
+
+.sidebar-admin-social {
+	font-size: 32px;
+	margin: 0px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+body>footer .sidebar-admin-social {
+	text-align: left;
+}
+
+[class^='icon-'], [class*=' icon-'] {
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: inherit;
+	-webkit-font-smoothing: antialiased;
+	*margin-right: .3em:;
+}
+
+[class^='icon-'], [class*=' icon-'] {
+	display: inline;
+	width: auto;
+	height: auto;
+	line-height: normal;
+	vertical-align: baseline;
+	background-image: none;
+	background-position: 0% 0%;
+	background-repeat: repeat;
+	margin-top: 0px;
+}
+
+[class^='icon-']::before, [class*=' icon-']::before {
+	text-decoration: inherit;
+	display: inline-block;
+	speak: none;
+}
+
+a [class^='icon-'], a [class*=' icon-'] {
+	display: inline;
+}
+
+.icon-twitter-sign::before {
+	content: "\f081";
+}
+
+.icon-linkedin-sign::before {
+	content: "\f08c";
+}
+
+.icon-facebook-sign::before {
+	content: "\f082";
+}
+
+.sidebar-admin-social a i {
+	text-shadow: 3px 3px 1px #000;
+}
+/* Footer */
+#footer {
+	background: #111;
+	box-shadow: 0 -1px 0 rgba(0, 0, 0, .1);
+	color: #f5f5f5;
+	margin-top: 4em;
+	padding: 1em 0em 3em 0em;
+}
+</style>
+</head>
+<body>
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4">
+					<div
+						class="widget widget_text"
+						id="text-3">
+						<h2 class="widgettitle">O Mnie</h2>
+						<div class="textwidget">
+							<b>Stanisław Molitorys</b>: web developer, pasjonat technologii webowych, programista back- i front-end. <br> <br> <b
+								style="color: rgb(51, 136, 204);">e-mail:</b> s.molitorys@gmail.com <br> <b style="color: rgb(51, 136, 204);">www:</b> <a
+								style="color: rgb(255, 255, 255);"
+								href="http://www.molitorys.pl"
+								target="blank">molitorys.pl</a>
+						</div>
+					</div>
+					<p class="sidebar-admin-social">
+						<a
+							class="social-icon"
+							href="https://www.facebook.com/stanislaw.molitorys"
+							target="_blank"><i class="icon-facebook-sign"></i></a> <a
+							class="social-icon"
+							href="https://www.linkedin.com/pub/stanislaw-molitorys/a/3b1/435"
+							target="_blank"><i class="icon-linkedin-sign"></i></a> <a
+							class="social-icon"
+							href="https://twitter.com/molis85"
+							target="_blank"><i class="icon-twitter-sign"></i></a>
+					</p>
+				</div>
+				<div class="col-sm-4"></div>
+				<div class="col-sm-4">
+					<div
+						class="widget widget_tag_cloud"
+						id="tag_cloud-4">
+						<h2 class="widgettitle">Chmurka Tagów</h2>
+						<div class="tagcloud">
+							<a
+								title="1 temat"
+								class="tag-link-31"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/ankieta">ankieta</a> <a
+								title="1 temat"
+								class="tag-link-38"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/array">array</a> <a
+								title="1 temat"
+								class="tag-link-39"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/arrayobject">ArrayObject</a> <a
+								title="1 temat"
+								class="tag-link-19"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/autoryzacja">autoryzacja</a> <a
+								title="1 temat"
+								class="tag-link-27"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/baza-danych-2">baza danych</a> <a
+								title="1 temat"
+								class="tag-link-15"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/bezpieczenstwo-2">bezpieczeństwo</a> <a
+								title="1 temat"
+								class="tag-link-35"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/cms">cms</a> <a
+								title="1 temat"
+								class="tag-link-32"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/framework-php">framework PHP</a> <a
+								title="1 temat"
+								class="tag-link-12"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/html5">HTML5</a> <a
+								title="1 temat"
+								class="tag-link-16"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/poufnosc">poufność</a> <a
+								title="1 temat"
+								class="tag-link-22"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/praca">praca</a> <a
+								title="1 temat"
+								class="tag-link-23"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/programista-php">programista PHP</a> <a
+								title="1 temat"
+								class="tag-link-28"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/szablony-javascript">szablony JavaScript</a> <a
+								title="1 temat"
+								class="tag-link-24"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/umiejetnosci">umiejętności</a> <a
+								title="1 temat"
+								class="tag-link-18"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/uwierzytelnianie">uwierzytelnianie</a> <a
+								title="1 temat"
+								class="tag-link-17"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/walidacja">walidacja</a> <a
+								title="1 temat"
+								class="tag-link-36"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/wtyczka-wordpress">wtyczka WordPress</a> <a
+								title="1 temat"
+								class="tag-link-13"
+								style="font-size: 8pt;"
+								href="http://www.blog.molitorys.pl/tag/znaczniki">znaczniki</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
+<!-- http://www.blog.molitorys.pl/ -->

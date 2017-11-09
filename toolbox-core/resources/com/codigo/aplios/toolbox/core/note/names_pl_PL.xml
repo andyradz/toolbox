@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <!-- NAZWY JEDNOŚCI -->
+    <entry key="0.0"></entry>
+    <entry key="0.1">jeden</entry>
+    <entry key="0.2">dwa</entry>
+    <entry key="0.3">trzy</entry>
+    <entry key="0.4">cztery</entry>
+    <entry key="0.5">pięć</entry>
+    <entry key="0.6">sześć</entry>
+    <entry key="0.7">siedem</entry>
+    <entry key="0.8">osiem</entry>
+    <entry key="0.9">dziewięć</entry>
+
+    <!-- NAZWY NASTEK -->
+    <entry key="1.0"></entry>
+    <entry key="1.1">jedenaście</entry>
+    <entry key="1.2">dwanaście</entry>
+    <entry key="1.3">trzynaście</entry>
+    <entry key="1.4">czternaście</entry>
+    <entry key="1.5">piętnaście</entry>
+    <entry key="1.6">szesnaście</entry>
+    <entry key="1.7">siedemnaście</entry>
+    <entry key="1.8">osiemnaście</entry>
+    <entry key="1.9">dziewiętnaście</entry>
+
+    <!-- NAZWY DZIESIATEK -->
+    <entry key="2.0"></entry>
+    <entry key="2.1">dziesięć</entry>
+    <entry key="2.2">dwadzieścia</entry>
+    <entry key="2.3">trzydzieści</entry>
+    <entry key="2.4">czterdzieści</entry>
+    <entry key="2.5">pięćdziesiąt</entry>
+    <entry key="2.6">sześćdziesiąt</entry>
+    <entry key="2.7">siedemdziesiąt</entry>
+    <entry key="2.8">osiemdziesiąt</entry>
+    <entry key="2.9">dziewięćdziesiąt</entry>
+
+    <!-- NAZWY SETKI -->
+    <entry key="3.0"></entry>
+    <entry key="3.1">sto</entry>
+    <entry key="3.2">dwieście</entry>
+    <entry key="3.3">trzysta</entry>
+    <entry key="3.4">czterysta</entry>
+    <entry key="3.5">pięćset</entry>
+    <entry key="3.6">sześćset</entry>
+    <entry key="3.7">siedemset</entry>
+    <entry key="3.8">osiemset</entry>
+    <entry key="3.9">dziewięćset</entry>
+
+    <!--NAZWY ZNAKU -->
+    <entry key="1">plus</entry>
+    <entry key="-1">minus</entry>
+    <entry key="0">zero</entry>
+
+    <!-- NAZWY TYSIĘCTY -->
+    <entry key="v.1.1">tysiąć</entry>
+    <entry key="v.1.2">tysiące</entry>
+    <entry key="v.1.3">tysięcy</entry>
+
+    <!-- NAZWY MILIONÓW -->
+    <entry key="v.2.1">milion</entry>
+    <entry key="v.2.1">miliony</entry>
+    <entry key="v.2.3">milionów</entry>
+
+    <!-- NAZWY MILIARDÓW -->
+    <entry key="v.3.1">miliard</entry>
+    <entry key="v.3.1">miliardy</entry>
+    <entry key="v.3.3">miliardów</entry>
+
+    <!-- NAZWY BILIONÓW -->
+    <entry key="v.4.1">bilion</entry>
+    <entry key="v.4.1">biliony</entry>
+    <entry key="v.4.3">bilionów</entry>
+
+    <!-- NAZWY BILIARDÓW -->
+    <entry key="v.5.1">biliard</entry>
+    <entry key="v.5.1">biliardy</entry>
+    <entry key="v.5.3">biliardów</entry>
+
+</properties>

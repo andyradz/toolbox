@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Canvas element size: 600 x 300, Canvas drawing surface size: 600 x 300</title>
+<style>
+body {
+	background: #dddddd;
+}
+
+#canvas {
+	margin: 10px;
+	padding: 10px;
+	background: #ffffff;
+	border: thin inset #aaaaaa;
+}
+</style>
+<script type="text/javascript">
+	function onLoadHandler() {
+		document.addEventListener('onclick', onClickHandler, false);
+		return;
+	}
+
+	function onClickHandler() {
+		 document.getElementById("demo").innerHTML = "Hello World";
+		return;
+	}
+
+	function addHandlers() {
+		var canvas = document.getElementById('canvas');
+		var context = canvas.getContext('2d');
+		context.font = '38pt Arial';
+		context.fillStyle = 'cornflowerblue';
+		context.strokeStyle = 'blue';
+		context.fillText("Hello Canvas", canvas.width / 2 - 150,
+				canvas.height / 2 + 15);
+		context.strokeText("Hello Canvas", canvas.width / 2 - 150,
+				canvas.height / 2 + 15);		
+		return;
+	}
+
+	function fnKoniec() {
+		alert('Koniec');
+		addHandlers();
+		return;
+	}
+</script>
+<script type="text/javascript">
+	
+</script>
+</head>
+<body onload="javascript:onLoadHandler();">
+	<div id="demo">
+		<button onclick="javascript:fnKoniec();">Koniec</button>
+	</div>
+	<canvas
+		id="canvas"
+		width="600"
+		height="300">
+		Canvas not supported
+	</canvas>
+</body>
+</html>

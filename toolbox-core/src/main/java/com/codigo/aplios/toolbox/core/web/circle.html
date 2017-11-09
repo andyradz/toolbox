@@ -1,0 +1,43 @@
+<!--<!DOCTYPE html>-->
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <title>circle with text</title>
+        <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+            body {
+                background-color: #fff;
+            }
+
+            .circle {
+                position: relative;
+                background-color: #09f;
+                background-color: black;
+                margin: 10px auto;
+                width: 400px;
+                height: 400px;
+                border-radius: 200px;
+                background-color: #09f;
+            }
+
+            .circle_text {
+                font-family: 'Montserrat', serif;
+                font-size: 1em;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                color: #fff;
+                transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="circle">
+            <div class="circle_text">
+                <p>circle in text</p>
+            </div>
+        </div>
+    </body>
+</html>

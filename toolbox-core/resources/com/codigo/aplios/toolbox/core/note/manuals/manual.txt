@@ -1,0 +1,8 @@
+#Instalacja i konfiguracja mavena
+https://eureka.ykyuen.info/2009/10/07/maven-installation/
+
+#Tworzenie modułu OSGI z uzyciem mavena
+https://eureka.ykyuen.info/2010/03/12/maven-create-a-osgi-bundle-using-maven-bundle-plugin/
+
+#Tworzenie programu za pomocą reactive programming
+https://gist.github.com/staltz/868e7e9bc2a7b8c1f754

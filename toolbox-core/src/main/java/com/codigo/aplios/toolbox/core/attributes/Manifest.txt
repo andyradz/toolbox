@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Created-By: 1.8.0_74 (Oracle Corporation)
+Name: java/util/
+Specification-Title: Attributes classes
+Specification-Version: 1.2
+Specification-Vendor: Codigo Digital Technology
+Implementation-Title: package.system
+Implementation-Version: build11
+Implementation-Vendor: Codigo Digital Technology

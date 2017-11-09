@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-shared-configuration>
+    <!--
+This file contains additional configuration written by modules in the NetBeans IDE.
+The configuration is intended to be shared among all the users of project and
+therefore it is assumed to be part of version control checkout.
+Without this configuration present, some functionality in the IDE may be limited or fail altogether.
+-->
+    <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+        <word>Adnotacja</word>
+        <word>definicji</word>
+        <word>domyślny</word>
+        <word>kodowania</word>
+        <word>rodzaj</word>
+        <word>standardzie</word>
+        <word>typem</word>
+        <word>ustawia</word>
+        <word>wskazuje</word>
+        <word>Właściwość</word>
+        <word>znaków</word>
+    </spellchecker-wordlist>
+</project-shared-configuration>
