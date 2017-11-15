@@ -16,8 +16,8 @@ public class BeanPropertyTableModel extends DefaultTableModel {
 
 	private Object _bean;
 
-	private String _nameColumnName = "Namecolumn";
-	private String _valueColumnName = "Valuecolumn";
+	private String	_nameColumnName		= "Namecolumn";
+	private String	_valueColumnName	= "Valuecolumn";
 
 	public BeanPropertyTableModel() {
 
@@ -36,13 +36,13 @@ public class BeanPropertyTableModel extends DefaultTableModel {
 		columnNames.add(this._nameColumnName);
 		columnNames.add(this._valueColumnName);
 		final Vector<Object> columnData = new Vector<>();
-		if (this._bean != null)
-			try {
-				BeanInfo info = Introspector.getBeanInfo(this._bean.getClass(), Introspector.USE_ALL_BEANINFO);
-				this.processBeanInfo(info, columnData);
-			} catch (Exception ex) {
-				throw new RuntimeException(ex);
-			}
+		if (this._bean != null) try {
+			BeanInfo info = Introspector.getBeanInfo(this._bean.getClass(), Introspector.USE_ALL_BEANINFO);
+			this.processBeanInfo(info, columnData);
+		}
+		catch (Exception ex) {
+			throw new RuntimeException(ex);
+		}
 
 		// Sort the rows by the property name.
 		Collections.sort(columnData, new DataSorter());
@@ -54,9 +54,8 @@ public class BeanPropertyTableModel extends DefaultTableModel {
 			throws InvocationTargetException, IllegalAccessException {
 
 		BeanInfo[] extra = info.getAdditionalBeanInfo();
-		if (extra != null)
-			for (BeanInfo element : extra)
-				this.processBeanInfo(element, columnData);
+		if (extra != null) for (BeanInfo element : extra)
+			this.processBeanInfo(element, columnData);
 
 		PropertyDescriptor[] propDesc = info.getPropertyDescriptors();
 		for (PropertyDescriptor element : propDesc) {
@@ -64,8 +63,7 @@ public class BeanPropertyTableModel extends DefaultTableModel {
 			final Method getter = element.getReadMethod();
 			if ((propName != null) && (getter != null)) {
 				Vector<Object> line = this.generateLine(propName, this._bean, getter);
-				if (line != null)
-					columnData.add(line);
+				if (line != null) columnData.add(line);
 			}
 		}
 	}
@@ -73,9 +71,12 @@ public class BeanPropertyTableModel extends DefaultTableModel {
 	/**
 	 * Generate a line for the passed property.
 	 *
-	 * @param propName Name of the property.
-	 * @param bean Bean containg the property.
-	 * @param getter The "getter" function to retrieve the properties value.
+	 * @param propName
+	 *        Name of the property.
+	 * @param bean
+	 *        Bean containg the property.
+	 * @param getter
+	 *        The "getter" function to retrieve the properties value.
 	 *
 	 * @return A <CODE>Vector</CODE> containing the cells for the line in the table. Element zero the first cell etc.
 	 *         Return <CODE>null</CODE> if this property is <B>not</B> to be added to the table.
@@ -117,7 +118,7 @@ public class BeanPropertyTableModel extends DefaultTableModel {
 			Vector<?> v2 = Vector.class.cast(o2);
 			String lhs = (String) v1.get(0);
 			String rhs = (String) v2.get(0);
-			return lhs.compareToIgnoreCase(rhs);
+			return 0;// lhs.compareToIgnoreCase(rhs);
 		}
 	}
 }

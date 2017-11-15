@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 
 /**
  * Our Custom Class Loader to load the classes. Any class in the com.journaldev package will be loaded using this
@@ -21,13 +20,13 @@ public class CCLoader extends ClassLoader {
 		String progArgs[] = new String[args.length - 1];
 		System.arraycopy(args, 1, progArgs, 0, progArgs.length);
 
-		CCLoader ccl = null;// new CCLoader(Screen.class.getClassLoader());
-		Class<?> clas = ccl.loadClass("com.codigo.aplios.contos.system.identity.Screen");
-		Class<?> mainArgType[] = { (String[].class) };
-		Method main = clas.getMethod("main", mainArgType);
-		// Method main = clas.getMethod("main");
-		Object argsArray[] = { progClass };
-		main.invoke("23", argsArray);
+		// CCLoader ccl = null;// new CCLoader(Screen.class.getClassLoader());
+		// Class<?> clas = ccl.loadClass("com.codigo.aplios.contos.system.identity.Screen");
+		// Class<?> mainArgType[] = { (String[].class) };
+		// Method main = clas.getMethod("main", mainArgType);
+		// // Method main = clas.getMethod("main");
+		// Object argsArray[] = { progClass };
+		// main.invoke("23", argsArray);
 		// main.invoke(null);
 
 		// Below method is used to check that the Foo is getting loaded
@@ -49,7 +48,8 @@ public class CCLoader extends ClassLoader {
 	 * Loads the class from the file system. The class file should be located in the file system. The name should be
 	 * relative to get the file location
 	 *
-	 * @param name Fully Classified name of class, for example com.journaldev.Foo
+	 * @param name
+	 *        Fully Classified name of class, for example com.journaldev.Foo
 	 */
 	private Class getClass(String name) throws ClassNotFoundException {
 
@@ -64,7 +64,8 @@ public class CCLoader extends ClassLoader {
 			Class c = this.defineClass(name, b, 0, b.length);
 			this.resolveClass(c);
 			return c;
-		} catch (IOException e) {
+		}
+		catch (IOException e) {
 			e.printStackTrace();
 			return null;
 		}
@@ -75,7 +76,8 @@ public class CCLoader extends ClassLoader {
 	 * classloader or else delegate the request to parent classloader.
 	 *
 	 *
-	 * @param name Full class name
+	 * @param name
+	 *        Full class name
 	 */
 	@Override
 	public Class loadClass(String name) throws ClassNotFoundException {
@@ -92,9 +94,11 @@ public class CCLoader extends ClassLoader {
 	 * Reads the file (.class) into a byte array. The file should be accessible as a resource and make sure that its not
 	 * in Classpath to avoid any confusion.
 	 *
-	 * @param name File name
+	 * @param name
+	 *        File name
 	 * @return Byte array read from the file
-	 * @throws IOException if any exception comes in reading the file
+	 * @throws IOException
+	 *         if any exception comes in reading the file
 	 */
 	private byte[] loadClassFileData(String name) throws IOException {
 
@@ -114,7 +118,8 @@ class Foo {
 	static public void main(String args[]) throws Exception {
 
 		System.out.println("Foo Constructor >>> " + args[0] + " " + args[1]);
-		Bar bar = new Bar(args[0], args[1]);
+		Bar bar = new Bar(args[0],
+			args[1]);
 		bar.printCL();
 	}
 

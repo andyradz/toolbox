@@ -71,9 +71,8 @@ public class ScratchSpace {
                 int newWidth = (int)(width * AnimatedPanel.this.progress);
 
                 AnimatedPanel.this.repaint(new Rectangle(oldWidth, 0, newWidth - oldWidth, height));
-                if (elapsed >= animationTime) {
+                if (elapsed >= animationTime)
                     timer.stop();
-                }
             });
             timer.start();
         }

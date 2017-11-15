@@ -45,54 +45,8 @@ public class BubbleSorterTests {
 	@BeforeEach
 	public void fillArray() {
 
-		this.data =
-				new Integer[]
-				{
-					3,
-					231,
-					332,
-					10,
-					-2,
-					-912,
-					-0,
-					+0,
-					11,
-					23,
-					23,
-					-12,
-					-1,
-					-6,
-					-5,
-					221,
-					10,
-					12,
-					209,
-					20,
-					0,
-					3,
-					2,
-					23,
-					12,
-					23,
-					34,
-					45,
-					3,
-					42,
-					1,
-					7,
-					2,
-					12,
-					9,
-					4,
-					8,
-					1,
-					22,
-					50,
-					34,
-					1,
-					2,
-					3,
-					4 };
+		this.data
+				= new Integer[] { 3, 231, 332, 10, -2, -912, -0, +0, 11, 23, 23, -12, -1, -6, -5, 221, 10, 12, 209, 20, 0, 3, 2, 23, 12, 23, 34, 45, 3, 42, 1, 7, 2, 12, 9, 4, 8, 1, 22, 50, 34, 1, 2, 3, 4 };
 	}
 
 	// -----------------------------------------------------------------------------------------------------------------
@@ -130,7 +84,8 @@ public class BubbleSorterTests {
 	public void shouldSortNumberDescending() {
 
 		// arrange
-		this.sortable = SortingContext.create(new BubbleSorter<>(Integer::compare, SortingMode.Descending));
+		this.sortable = SortingContext.create(new BubbleSorter<>(Integer::compare,
+			SortingMode.Descending));
 
 		// act
 		this.sortable.getSorter()

@@ -24,8 +24,7 @@ import java.util.stream.Stream;
 interface StreamEx<T> extends Stream<T> {
 	default <R> Function<T, Stream<R>> select(Class<R> clazz) {
 
-		return e -> clazz.isInstance(e) ? Stream.of(clazz.cast(e))
-				: null;
+		return e -> clazz.isInstance(e) ? Stream.of(clazz.cast(e)) : null;
 	}
 }
 
@@ -48,11 +47,6 @@ class MyStream<T> implements Stream<T>, StreamEx<T> {
 	public void forEach(Consumer<? super T> action) {
 
 		this.delegate.forEach(action);
-	}
-
-	MyStream<T> biggerThanFour() {
-
-		return new MyStream<>(this.delegate.filter(i -> ((Double) i > 4)));
 	}
 
 	@Override
